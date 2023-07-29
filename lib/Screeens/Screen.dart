@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
+import 'HomeScreen.dart';
+
 class Screen extends StatefulWidget {
   const Screen({super.key});
 
@@ -13,7 +15,7 @@ class _ScreenState extends State<Screen> {
   int _selectedIndex = 0;
 
   static List<Widget> _widgetOptions = <Widget>[
-    Container(),
+    HomeScreen(),
     Container(),
     Container(),
     Container()
@@ -42,25 +44,25 @@ class _ScreenState extends State<Screen> {
               hoverColor: Colors.grey,
               gap: 7, //space between LineIcons and text;
               activeColor: Colors.white,
-              duration: Duration(milliseconds: 400),
+              duration: const Duration(milliseconds: 400),
               tabBackgroundColor: Colors.green,
               //color: Colors.black,
-              tabs: [
+              tabs: const [
                 GButton(
                   icon: LineIcons.home,
                   text: "Home",
                 ),
                 GButton(
-                  icon: LineIcons.home,
-                  text: "Home",
+                  icon: LineIcons.shoppingBag,
+                  text: "Cart",
                 ),
                 GButton(
-                  icon: LineIcons.home,
-                  text: "Home",
+                  icon: LineIcons.heart,
+                  text: "WishList",
                 ),
                 GButton(
-                  icon: LineIcons.home,
-                  text: "Home",
+                  icon: LineIcons.user,
+                  text: "Account",
                 ),
               ],
               //
