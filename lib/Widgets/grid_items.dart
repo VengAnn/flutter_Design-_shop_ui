@@ -3,8 +3,8 @@ import '../Screeens/ItemScreen.dart';
 
 // ignore: must_be_immutable
 class GridItems extends StatelessWidget {
-  //productName =[Name,Discount Price,Real Price]
-  var proNames = [
+  //productName =[Name,Discount Price,Real Price,]
+  List proNames = [
     ["Apple Watch -M2", "150\$", "300\$"],
     ["Ear Headphone", "40\$", "60\$"],
     ["White Tshirt", "15\$", "30\$"],
@@ -19,6 +19,7 @@ class GridItems extends StatelessWidget {
       child: GridView.builder(
           itemCount: proNames.length,
           scrollDirection: Axis.vertical,
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,

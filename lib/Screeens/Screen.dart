@@ -3,6 +3,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
 import 'HomeScreen.dart';
+import 'cart_Item.dart';
 
 class Screen extends StatefulWidget {
   const Screen({super.key});
@@ -16,7 +17,7 @@ class _ScreenState extends State<Screen> {
 
   static List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    Container(),
+    CartItem(),
     Container(),
     Container()
   ];
